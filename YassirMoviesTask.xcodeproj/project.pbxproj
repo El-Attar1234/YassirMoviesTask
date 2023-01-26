@@ -64,13 +64,11 @@
 		8440EAE62982B5A0001598C3 /* YassirMoviesTask */ = {
 			isa = PBXGroup;
 			children = (
+				8440EB122982BC5D001598C3 /* Application */,
 				8440EB112982BBF0001598C3 /* Configuration */,
 				8440EAFC2982B911001598C3 /* Resources */,
 				8440EB092982BAB9001598C3 /* Features */,
 				8440EB032982BA2F001598C3 /* Services */,
-				8440EAE72982B5A0001598C3 /* AppDelegate.swift */,
-				8440EAE92982B5A0001598C3 /* SceneDelegate.swift */,
-				8440EAF22982B5A2001598C3 /* LaunchScreen.storyboard */,
 			);
 			path = YassirMoviesTask;
 			sourceTree = "<group>";
@@ -78,6 +76,7 @@
 		8440EAFC2982B911001598C3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8440EAF22982B5A2001598C3 /* LaunchScreen.storyboard */,
 				8440EAFF2982B949001598C3 /* Assets */,
 			);
 			path = Resources;
@@ -149,6 +148,15 @@
 				8440EAF52982B5A2001598C3 /* Info.plist */,
 			);
 			path = Configuration;
+			sourceTree = "<group>";
+		};
+		8440EB122982BC5D001598C3 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				8440EAE72982B5A0001598C3 /* AppDelegate.swift */,
+				8440EAE92982B5A0001598C3 /* SceneDelegate.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
