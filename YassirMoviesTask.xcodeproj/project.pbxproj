@@ -47,6 +47,9 @@
 		8440EB8529832B69001598C3 /* Cairo-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8440EB8329832B69001598C3 /* Cairo-SemiBold.ttf */; };
 		8440EB8729832C09001598C3 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440EB8629832C09001598C3 /* Fonts.swift */; };
 		8440EB8A29832EBB001598C3 /* UIImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440EB8929832EBB001598C3 /* UIImageView+Ext.swift */; };
+		8440EB90298335B4001598C3 /* MovieDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440EB8E298335B4001598C3 /* MovieDetailsVC.swift */; };
+		8440EB91298335B4001598C3 /* MovieDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8440EB8F298335B4001598C3 /* MovieDetailsVC.xib */; };
+		8440EB9429833B13001598C3 /* MovieDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440EB9329833B13001598C3 /* MovieDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +91,9 @@
 		8440EB8329832B69001598C3 /* Cairo-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-SemiBold.ttf"; sourceTree = "<group>"; };
 		8440EB8629832C09001598C3 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		8440EB8929832EBB001598C3 /* UIImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
+		8440EB8E298335B4001598C3 /* MovieDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsVC.swift; sourceTree = "<group>"; };
+		8440EB8F298335B4001598C3 /* MovieDetailsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailsVC.xib; sourceTree = "<group>"; };
+		8440EB9329833B13001598C3 /* MovieDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				8440EB0A2982BABF001598C3 /* Home */,
+				8440EB8C29833587001598C3 /* Details */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -437,6 +444,32 @@
 			path = UIImageView;
 			sourceTree = "<group>";
 		};
+		8440EB8C29833587001598C3 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				8440EB9229833B03001598C3 /* Entity */,
+				8440EB8D29833595001598C3 /* View */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		8440EB8D29833595001598C3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8440EB8E298335B4001598C3 /* MovieDetailsVC.swift */,
+				8440EB8F298335B4001598C3 /* MovieDetailsVC.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8440EB9229833B03001598C3 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				8440EB9329833B13001598C3 /* MovieDetails.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -518,6 +551,7 @@
 				8440EB212982BDE1001598C3 /* Live.xcconfig in Resources */,
 				8440EB7F2983096D001598C3 /* MovieCell.xib in Resources */,
 				8440EB8429832B69001598C3 /* Cairo-Bold.ttf in Resources */,
+				8440EB91298335B4001598C3 /* MovieDetailsVC.xib in Resources */,
 				8440EAF12982B5A2001598C3 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -585,6 +619,7 @@
 				8440EB6E29830589001598C3 /* HomeRouter.swift in Sources */,
 				8440EB482982C801001598C3 /* MoviesEndPoint.swift in Sources */,
 				8440EB7729830836001598C3 /* NSObject+Ext.swift in Sources */,
+				8440EB9429833B13001598C3 /* MovieDetails.swift in Sources */,
 				8440EB7A298308A4001598C3 /* View+Ext.swift in Sources */,
 				8440EB082982BA71001598C3 /* SceneContainer.swift in Sources */,
 				8440EB232982BFA1001598C3 /* Environment.swift in Sources */,
@@ -593,6 +628,7 @@
 				8440EAEA2982B5A0001598C3 /* SceneDelegate.swift in Sources */,
 				8440EB642982F77D001598C3 /* HomeProtocols.swift in Sources */,
 				8440EB5B2982F2C1001598C3 /* BaseViewProtocol.swift in Sources */,
+				8440EB90298335B4001598C3 /* MovieDetailsVC.swift in Sources */,
 				8440EB742983080D001598C3 /* UITableView+Ext.swift in Sources */,
 				8440EB4E2982CAFD001598C3 /* DataSource.swift in Sources */,
 				8440EB022982B9E5001598C3 /* XCAssets+Generated.swift in Sources */,

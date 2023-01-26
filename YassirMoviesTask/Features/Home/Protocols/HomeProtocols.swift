@@ -12,6 +12,7 @@ protocol HomePresenterProtocol: BasePresenterProtocol {
     func getMovies()
     func getMoviesCount() -> Int
     func getMovie(item: Int) -> Movie
+    func didSelect(item: Int)
 }
 
 // MARK: - Presenter -> ViewController
@@ -32,4 +33,5 @@ protocol HomeInteractorOutputProtocol: AnyObject {
 
 // MARK: - Router
 protocol HomeRouterProtocol: AnyObject {
+    func navigateToMovieDetails(id: Int)
 }

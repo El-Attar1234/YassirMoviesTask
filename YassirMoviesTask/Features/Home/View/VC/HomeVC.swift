@@ -53,6 +53,6 @@ extension HomeVC: UITableViewDataSource {
 
 extension HomeVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(presenter?.getMovie(item: indexPath.item))
+        presenter?.didSelect(item: indexPath.item)
     }
 }

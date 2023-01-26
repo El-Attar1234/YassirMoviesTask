@@ -28,6 +28,11 @@ class HomePresenter {
 }
 
 extension HomePresenter: HomePresenterProtocol {
+    func didSelect(item: Int) {
+        let movieId = movise[item].id ?? 0
+        router?.navigateToMovieDetails(id: movieId)
+    }
+    
     func viewWillAppear() {
         view?.showLoadingIndicator?()
         currentPage = 1

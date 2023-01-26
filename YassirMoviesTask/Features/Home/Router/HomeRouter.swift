@@ -27,4 +27,9 @@ class HomeRouter {
 }
 
 extension HomeRouter: HomeRouterProtocol {
+    func navigateToMovieDetails(id: Int) {
+        let vc = SceneContainer.getMovieDetailsVC()
+        viewController?.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }
