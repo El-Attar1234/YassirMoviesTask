@@ -15,8 +15,8 @@ final class SceneContainer {
         let nav = AppNavigationController(rootViewController: viewController)
         return nav
     }
-    static func getHomeVc() -> HomeVC {
-        let vc = HomeVC()
+    static func getHomeVC() -> HomeVC {
+        let vc = HomeRouter.createModule()
         return vc
     }
 }
