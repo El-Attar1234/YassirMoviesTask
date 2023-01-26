@@ -21,8 +21,8 @@ final class SceneContainer {
         return vc
     }
     
-    static func getMovieDetailsVC() -> MovieDetailsVC {
-        let vc = MovieDetailsVC()
+    static func getMovieDetailsVC(id: Int) -> MovieDetailsVC {
+        let vc = MovieDetailsRouter.createModule(id: id)
         return vc
     }
 }

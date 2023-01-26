@@ -10,6 +10,7 @@ import Moya
 
 enum AppEndPoints {
     case fetchMovies(page: Int)
+    case fetchMovieDetails(id: Int)
 }
 
 extension AppEndPoints: TargetType {
@@ -23,12 +24,14 @@ extension AppEndPoints: TargetType {
         switch self {
         case .fetchMovies:
             return "/discover/movie"
+        case .fetchMovieDetails(let id):
+            return "/movie/\(id)"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .fetchMovies:
+        case .fetchMovies, .fetchMovieDetails:
             return .get
         }
         
@@ -46,7 +49,9 @@ extension AppEndPoints: TargetType {
             params["page"] = page
             params["api_key"] = Environment.apiKey
             return .requestParameters(parameters: params, encoding: URLEncoding.queryString)
-            
+        case .fetchMovieDetails:
+            let params = ["api_key": Environment.apiKey]
+            return .requestParameters(parameters: params, encoding: URLEncoding.queryString)
         }
     }
     

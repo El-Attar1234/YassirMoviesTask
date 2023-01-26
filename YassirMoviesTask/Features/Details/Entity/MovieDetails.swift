@@ -12,7 +12,7 @@ import Foundation
 struct MovieDetails: Codable {
     let adult: Bool?
     let backdropPath: String?
-    let belongsToCollection: String?
+    let belongsToCollection: BelongsToCollection?
     let budget: Int?
     let genres: [Genre?]
     let homepage: String?
@@ -20,6 +20,10 @@ struct MovieDetails: Codable {
     let imdbID, originalLanguage, originalTitle, overview: String?
     let popularity: Double?
     let posterPath: String?
+    var posterFullPath: String? {
+        guard let posterPath = posterPath else { return nil }
+        return Environment.posterbaseURL + posterPath
+    }
     let productionCompanies: [ProductionCompany?]
     let productionCountries: [ProductionCountry?]
     let releaseDate: String?
@@ -50,17 +54,27 @@ struct MovieDetails: Codable {
         case voteCount = "vote_count"
     }
 }
+struct BelongsToCollection: Codable {
+    let id: Int?
+    let name, posterPath, backdropPath: String?
+
+    enum CodingKeys: String, CodingKey {
+        case id, name
+        case posterPath = "poster_path"
+        case backdropPath = "backdrop_path"
+    }
+}
 
 // MARK: - Genre
 struct Genre: Codable {
-    let id: Int
-    let name: String
+    let id: Int?
+    let name: String?
 }
 
 // MARK: - ProductionCompany
 struct ProductionCompany: Codable {
-    let id: Int
-    let logoPath, name, originCountry: String
+    let id: Int?
+    let logoPath, name, originCountry: String?
 
     enum CodingKeys: String, CodingKey {
         case id

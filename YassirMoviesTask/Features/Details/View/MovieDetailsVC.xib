@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MovieDetailsVC" customModule="YassirMoviesTask" customModuleProvider="target">
             <connections>
+                <outlet property="movieImage" destination="2Jq-Er-AFI" id="V0z-68-JTW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,14 +18,52 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rQc-z8-dC6">
+                    <rect key="frame" x="0.0" y="47" width="390" height="763"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Nh-Ad-LFw">
+                            <rect key="frame" x="0.0" y="0.0" width="390" height="763"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Jq-Er-AFI">
+                                    <rect key="frame" x="15" y="5" width="360" height="150"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="150" id="db0-dj-3eE"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="2Jq-Er-AFI" firstAttribute="leading" secondItem="1Nh-Ad-LFw" secondAttribute="leading" constant="15" id="2vv-L5-b79"/>
+                                <constraint firstAttribute="trailing" secondItem="2Jq-Er-AFI" secondAttribute="trailing" constant="15" id="pum-9C-ugj"/>
+                                <constraint firstItem="2Jq-Er-AFI" firstAttribute="top" secondItem="1Nh-Ad-LFw" secondAttribute="top" constant="5" id="vJp-AS-SVW"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="1Nh-Ad-LFw" firstAttribute="top" secondItem="rQc-z8-dC6" secondAttribute="top" id="0nt-mB-c3O"/>
+                        <constraint firstItem="1Nh-Ad-LFw" firstAttribute="height" secondItem="rQc-z8-dC6" secondAttribute="height" priority="250" id="FTt-GM-NQV"/>
+                        <constraint firstAttribute="trailing" secondItem="1Nh-Ad-LFw" secondAttribute="trailing" id="K5M-CE-wcV"/>
+                        <constraint firstItem="1Nh-Ad-LFw" firstAttribute="width" secondItem="rQc-z8-dC6" secondAttribute="width" id="LDK-Ta-vAJ"/>
+                        <constraint firstAttribute="bottom" secondItem="1Nh-Ad-LFw" secondAttribute="bottom" id="dmY-dN-fsw"/>
+                        <constraint firstItem="1Nh-Ad-LFw" firstAttribute="leading" secondItem="rQc-z8-dC6" secondAttribute="leading" id="lQd-Py-twE"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemGreenColor"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="rQc-z8-dC6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Sl1-mr-wkF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rQc-z8-dC6" secondAttribute="trailing" id="Up5-5H-pOf"/>
+                <constraint firstItem="rQc-z8-dC6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="czh-NY-3q2"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="rQc-z8-dC6" secondAttribute="bottom" id="g20-xb-gFe"/>
+            </constraints>
             <point key="canvasLocation" x="18" y="21"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
