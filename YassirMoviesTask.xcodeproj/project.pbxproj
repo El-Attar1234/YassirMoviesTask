@@ -27,6 +27,12 @@
 		8440EB372982C307001598C3 /* SwiftMessages in Frameworks */ = {isa = PBXBuildFile; productRef = 8440EB362982C307001598C3 /* SwiftMessages */; };
 		8440EB3A2982C32E001598C3 /* MBProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 8440EB392982C32E001598C3 /* MBProgressHUD */; };
 		8440EB3D2982C358001598C3 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8440EB3C2982C358001598C3 /* Kingfisher */; };
+		8440EB452982C783001598C3 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440EB442982C783001598C3 /* NetworkError.swift */; };
+		8440EB482982C801001598C3 /* MoviesEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440EB472982C801001598C3 /* MoviesEndPoint.swift */; };
+		8440EB4B2982CAA1001598C3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440EB4A2982CAA1001598C3 /* NetworkManager.swift */; };
+		8440EB4E2982CAFD001598C3 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440EB4D2982CAFD001598C3 /* DataSource.swift */; };
+		8440EB522982CBF0001598C3 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440EB512982CBEF001598C3 /* Movie.swift */; };
+		8440EB552982CC22001598C3 /* ServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440EB542982CC22001598C3 /* ServerResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +52,12 @@
 		8440EB1E2982BDD1001598C3 /* Stage.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Stage.xcconfig; sourceTree = "<group>"; };
 		8440EB202982BDDF001598C3 /* Live.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Live.xcconfig; sourceTree = "<group>"; };
 		8440EB222982BFA1001598C3 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		8440EB442982C783001598C3 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		8440EB472982C801001598C3 /* MoviesEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesEndPoint.swift; sourceTree = "<group>"; };
+		8440EB4A2982CAA1001598C3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		8440EB4D2982CAFD001598C3 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		8440EB512982CBEF001598C3 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		8440EB542982CC22001598C3 /* ServerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,8 +99,9 @@
 				8440EB122982BC5D001598C3 /* Application */,
 				8440EB112982BBF0001598C3 /* Configuration */,
 				8440EAFC2982B911001598C3 /* Resources */,
-				8440EB092982BAB9001598C3 /* Features */,
 				8440EB032982BA2F001598C3 /* Services */,
+				8440EB092982BAB9001598C3 /* Features */,
+				8440EB3E2982C72D001598C3 /* Data */,
 			);
 			path = YassirMoviesTask;
 			sourceTree = "<group>";
@@ -132,6 +145,7 @@
 		8440EB092982BAB9001598C3 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				8440EB502982CBE3001598C3 /* Entitiy */,
 				8440EB0A2982BABF001598C3 /* Home */,
 			);
 			path = Features;
@@ -189,6 +203,74 @@
 				8440EB222982BFA1001598C3 /* Environment.swift */,
 			);
 			path = Environments;
+			sourceTree = "<group>";
+		};
+		8440EB3E2982C72D001598C3 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8440EB532982CC12001598C3 /* Response */,
+				8440EB4C2982CAEE001598C3 /* DataSource */,
+				8440EB422982C766001598C3 /* Network */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		8440EB3F2982C73F001598C3 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				8440EB442982C783001598C3 /* NetworkError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		8440EB402982C744001598C3 /* EndPoints */ = {
+			isa = PBXGroup;
+			children = (
+				8440EB472982C801001598C3 /* MoviesEndPoint.swift */,
+			);
+			path = EndPoints;
+			sourceTree = "<group>";
+		};
+		8440EB412982C74E001598C3 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				8440EB4A2982CAA1001598C3 /* NetworkManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		8440EB422982C766001598C3 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				8440EB412982C74E001598C3 /* Manager */,
+				8440EB402982C744001598C3 /* EndPoints */,
+				8440EB3F2982C73F001598C3 /* Error */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		8440EB4C2982CAEE001598C3 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				8440EB4D2982CAFD001598C3 /* DataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		8440EB502982CBE3001598C3 /* Entitiy */ = {
+			isa = PBXGroup;
+			children = (
+				8440EB512982CBEF001598C3 /* Movie.swift */,
+			);
+			path = Entitiy;
+			sourceTree = "<group>";
+		};
+		8440EB532982CC12001598C3 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				8440EB542982CC22001598C3 /* ServerResponse.swift */,
+			);
+			path = Response;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,11 +407,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				8440EB0F2982BB0C001598C3 /* HomeVC.swift in Sources */,
+				8440EB452982C783001598C3 /* NetworkError.swift in Sources */,
+				8440EB522982CBF0001598C3 /* Movie.swift in Sources */,
+				8440EB552982CC22001598C3 /* ServerResponse.swift in Sources */,
+				8440EB4B2982CAA1001598C3 /* NetworkManager.swift in Sources */,
 				8440EB062982BA4F001598C3 /* AppManager.swift in Sources */,
+				8440EB482982C801001598C3 /* MoviesEndPoint.swift in Sources */,
 				8440EB082982BA71001598C3 /* SceneContainer.swift in Sources */,
 				8440EB232982BFA1001598C3 /* Environment.swift in Sources */,
 				8440EAE82982B5A0001598C3 /* AppDelegate.swift in Sources */,
 				8440EAEA2982B5A0001598C3 /* SceneDelegate.swift in Sources */,
+				8440EB4E2982CAFD001598C3 /* DataSource.swift in Sources */,
 				8440EB022982B9E5001598C3 /* XCAssets+Generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
