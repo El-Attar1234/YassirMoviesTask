@@ -33,6 +33,8 @@
 		8440EB4E2982CAFD001598C3 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440EB4D2982CAFD001598C3 /* DataSource.swift */; };
 		8440EB522982CBF0001598C3 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440EB512982CBEF001598C3 /* Movie.swift */; };
 		8440EB552982CC22001598C3 /* ServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440EB542982CC22001598C3 /* ServerResponse.swift */; };
+		8440EB5B2982F2C1001598C3 /* BaseViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440EB5A2982F2C1001598C3 /* BaseViewProtocol.swift */; };
+		8440EB5E2982F46F001598C3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440EB5D2982F46F001598C3 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		8440EB4D2982CAFD001598C3 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		8440EB512982CBEF001598C3 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		8440EB542982CC22001598C3 /* ServerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerResponse.swift; sourceTree = "<group>"; };
+		8440EB5A2982F2C1001598C3 /* BaseViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewProtocol.swift; sourceTree = "<group>"; };
+		8440EB5D2982F46F001598C3 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,7 @@
 				8440EB112982BBF0001598C3 /* Configuration */,
 				8440EAFC2982B911001598C3 /* Resources */,
 				8440EB032982BA2F001598C3 /* Services */,
+				8440EB592982F28F001598C3 /* Base */,
 				8440EB092982BAB9001598C3 /* Features */,
 				8440EB3E2982C72D001598C3 /* Data */,
 			);
@@ -145,7 +150,6 @@
 		8440EB092982BAB9001598C3 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				8440EB502982CBE3001598C3 /* Entitiy */,
 				8440EB0A2982BABF001598C3 /* Home */,
 			);
 			path = Features;
@@ -155,6 +159,11 @@
 			isa = PBXGroup;
 			children = (
 				8440EB0B2982BAF4001598C3 /* View */,
+				8440EB602982F6D3001598C3 /* Interactor */,
+				8440EB5F2982F6C7001598C3 /* Presenter */,
+				8440EB502982CBE3001598C3 /* Entitiy */,
+				8440EB612982F6DD001598C3 /* Router */,
+				8440EB622982F6E3001598C3 /* Protocols */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -271,6 +280,51 @@
 				8440EB542982CC22001598C3 /* ServerResponse.swift */,
 			);
 			path = Response;
+			sourceTree = "<group>";
+		};
+		8440EB592982F28F001598C3 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				8440EB5C2982F458001598C3 /* View */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		8440EB5C2982F458001598C3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8440EB5A2982F2C1001598C3 /* BaseViewProtocol.swift */,
+				8440EB5D2982F46F001598C3 /* BaseViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8440EB5F2982F6C7001598C3 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		8440EB602982F6D3001598C3 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		8440EB612982F6DD001598C3 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		8440EB622982F6E3001598C3 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -411,12 +465,14 @@
 				8440EB522982CBF0001598C3 /* Movie.swift in Sources */,
 				8440EB552982CC22001598C3 /* ServerResponse.swift in Sources */,
 				8440EB4B2982CAA1001598C3 /* NetworkManager.swift in Sources */,
+				8440EB5E2982F46F001598C3 /* BaseViewController.swift in Sources */,
 				8440EB062982BA4F001598C3 /* AppManager.swift in Sources */,
 				8440EB482982C801001598C3 /* MoviesEndPoint.swift in Sources */,
 				8440EB082982BA71001598C3 /* SceneContainer.swift in Sources */,
 				8440EB232982BFA1001598C3 /* Environment.swift in Sources */,
 				8440EAE82982B5A0001598C3 /* AppDelegate.swift in Sources */,
 				8440EAEA2982B5A0001598C3 /* SceneDelegate.swift in Sources */,
+				8440EB5B2982F2C1001598C3 /* BaseViewProtocol.swift in Sources */,
 				8440EB4E2982CAFD001598C3 /* DataSource.swift in Sources */,
 				8440EB022982B9E5001598C3 /* XCAssets+Generated.swift in Sources */,
 			);
