@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		8440EAE82982B5A0001598C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440EAE72982B5A0001598C3 /* AppDelegate.swift */; };
 		8440EAEA2982B5A0001598C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440EAE92982B5A0001598C3 /* SceneDelegate.swift */; };
-		8440EAEC2982B5A0001598C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440EAEB2982B5A0001598C3 /* ViewController.swift */; };
-		8440EAEF2982B5A0001598C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8440EAED2982B5A0001598C3 /* Main.storyboard */; };
 		8440EAF12982B5A2001598C3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8440EAF02982B5A2001598C3 /* Images.xcassets */; };
 		8440EAF42982B5A2001598C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8440EAF22982B5A2001598C3 /* LaunchScreen.storyboard */; };
 		8440EAFE2982B92F001598C3 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8440EAFD2982B92F001598C3 /* Colors.xcassets */; };
@@ -25,8 +23,6 @@
 		8440EAE42982B5A0001598C3 /* YassirMoviesTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YassirMoviesTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8440EAE72982B5A0001598C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8440EAE92982B5A0001598C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8440EAEB2982B5A0001598C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8440EAEE2982B5A0001598C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8440EAF02982B5A2001598C3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8440EAF32982B5A2001598C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8440EAF52982B5A2001598C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -68,15 +64,13 @@
 		8440EAE62982B5A0001598C3 /* YassirMoviesTask */ = {
 			isa = PBXGroup;
 			children = (
+				8440EB112982BBF0001598C3 /* Configuration */,
+				8440EAFC2982B911001598C3 /* Resources */,
 				8440EB092982BAB9001598C3 /* Features */,
 				8440EB032982BA2F001598C3 /* Services */,
-				8440EAFC2982B911001598C3 /* Resources */,
 				8440EAE72982B5A0001598C3 /* AppDelegate.swift */,
 				8440EAE92982B5A0001598C3 /* SceneDelegate.swift */,
-				8440EAEB2982B5A0001598C3 /* ViewController.swift */,
-				8440EAED2982B5A0001598C3 /* Main.storyboard */,
 				8440EAF22982B5A2001598C3 /* LaunchScreen.storyboard */,
-				8440EAF52982B5A2001598C3 /* Info.plist */,
 			);
 			path = YassirMoviesTask;
 			sourceTree = "<group>";
@@ -149,6 +143,14 @@
 			path = VC;
 			sourceTree = "<group>";
 		};
+		8440EB112982BBF0001598C3 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				8440EAF52982B5A2001598C3 /* Info.plist */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -213,7 +215,6 @@
 				8440EAFE2982B92F001598C3 /* Colors.xcassets in Resources */,
 				8440EB102982BB0C001598C3 /* HomeVC.xib in Resources */,
 				8440EAF12982B5A2001598C3 /* Images.xcassets in Resources */,
-				8440EAEF2982B5A0001598C3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +266,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8440EAEC2982B5A0001598C3 /* ViewController.swift in Sources */,
 				8440EB0F2982BB0C001598C3 /* HomeVC.swift in Sources */,
 				8440EB062982BA4F001598C3 /* AppManager.swift in Sources */,
 				8440EB082982BA71001598C3 /* SceneContainer.swift in Sources */,
@@ -278,14 +278,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8440EAED2982B5A0001598C3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8440EAEE2982B5A0001598C3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8440EAF22982B5A2001598C3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -420,7 +412,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C3285PZR24;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = YassirMoviesTask/Info.plist;
+				INFOPLIST_FILE = YassirMoviesTask/Configuration/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -447,7 +439,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C3285PZR24;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = YassirMoviesTask/Info.plist;
+				INFOPLIST_FILE = YassirMoviesTask/Configuration/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
