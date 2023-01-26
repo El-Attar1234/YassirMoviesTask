@@ -11,6 +11,8 @@ public enum Environment {
     // MARK: - Keys
     enum PlistKeys {
         static let baseURL = "BASE_URL"
+        static let apiKey = "API_KEY"
+        
     }
     
     // MARK: - Plist
@@ -23,13 +25,20 @@ public enum Environment {
     
     // MARK: - Plist values
     static let baseURL: URL = {
-        guard let rootURLstring = Environment.infoDictionary[PlistKeys.baseURL] as? String else {
+        guard let rootURLString = Environment.infoDictionary[PlistKeys.baseURL] as? String else {
             fatalError("Base URL not set in plist for this environment")
         }
-        guard let url = URL(string: rootURLstring) else {
+        guard let url = URL(string: rootURLString) else {
             fatalError("Base URL is invalid")
         }
         return url
+    }()
+    
+    static let apiKey: String = {
+        guard let apiKeyString = Environment.infoDictionary[PlistKeys.apiKey] as? String else {
+            fatalError("Api Key not set in plist for this environment")
+        }
+        return apiKeyString
     }()
     
 }

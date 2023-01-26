@@ -44,7 +44,7 @@ extension AppEndPoints: TargetType {
         case .fetchMovies(let page):
             var params: [String: Any] = [:]
             params["page"] = page
-            params["api_key"] = "c9856d0cb57c3f14bf75bdc6c063b8f3"
+            params["api_key"] = Environment.apiKey
             return .requestParameters(parameters: params, encoding: URLEncoding.queryString)
             
         }
