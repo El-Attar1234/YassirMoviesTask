@@ -12,6 +12,7 @@ public enum Environment {
     enum PlistKeys {
         static let baseURL = "BASE_URL"
         static let apiKey = "API_KEY"
+        static let posterBaseURL =  "POSTER_BASE_URL"
         
     }
     
@@ -41,4 +42,10 @@ public enum Environment {
         return apiKeyString
     }()
     
+    static let posterbaseURL: String = {
+        guard let posterbaseURL = Environment.infoDictionary[PlistKeys.posterBaseURL] as? String else {
+            fatalError("POSTER BASE URL Key not set in plist for this environment")
+        }
+        return posterbaseURL
+    }()
 }

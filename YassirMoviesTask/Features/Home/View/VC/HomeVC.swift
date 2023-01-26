@@ -9,14 +9,13 @@ import UIKit
 
 
 class HomeVC: BaseViewController {
-    @IBOutlet weak var moviesTableView: UITableView!{
+    @IBOutlet private weak var moviesTableView: UITableView!{
         didSet {
             moviesTableView.dataSource = self
             moviesTableView.delegate   = self
             moviesTableView.register(cellType: MovieCell.self)
         }
     }
-    
     
     private var presenter: HomePresenterProtocol?
 
@@ -47,6 +46,7 @@ extension HomeVC: UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(with: MovieCell.self, for: indexPath)
+        cell.setup(movie: presenter?.getMovie(item: indexPath.item))
         return cell
     }
 }

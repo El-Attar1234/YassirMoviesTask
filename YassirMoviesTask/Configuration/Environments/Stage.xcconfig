@@ -9,3 +9,4 @@
 // https://help.apple.com/xcode/#/dev745c5c974
 BASE_URL = https:/$()/api.themoviedb.org/3
 API_KEY = c9856d0cb57c3f14bf75bdc6c063b8f3
+POSTER_BASE_URL = https:/$()/image.tmdb.org/t/p/w500
