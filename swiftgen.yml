@@ -1,0 +1,13 @@
+ # common path for inputs and outputs of resources
+ input_dir: YassirMoviesTask/Resources/
+ output_dir: YassirMoviesTask/Resources/
+ 
+
+# Assets(Images and colors)
+ xcassets:
+   inputs:
+     - Assets/Images.xcassets
+     - Assets/Colors.xcassets
+   outputs:
+     - templateName: swift5
+       output: Assets/XCAssets+Generated.swift

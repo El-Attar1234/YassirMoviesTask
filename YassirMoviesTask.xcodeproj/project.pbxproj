@@ -11,8 +11,10 @@
 		8440EAEA2982B5A0001598C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440EAE92982B5A0001598C3 /* SceneDelegate.swift */; };
 		8440EAEC2982B5A0001598C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440EAEB2982B5A0001598C3 /* ViewController.swift */; };
 		8440EAEF2982B5A0001598C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8440EAED2982B5A0001598C3 /* Main.storyboard */; };
-		8440EAF12982B5A2001598C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8440EAF02982B5A2001598C3 /* Assets.xcassets */; };
+		8440EAF12982B5A2001598C3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8440EAF02982B5A2001598C3 /* Images.xcassets */; };
 		8440EAF42982B5A2001598C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8440EAF22982B5A2001598C3 /* LaunchScreen.storyboard */; };
+		8440EAFE2982B92F001598C3 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8440EAFD2982B92F001598C3 /* Colors.xcassets */; };
+		8440EB022982B9E5001598C3 /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440EB012982B9E5001598C3 /* XCAssets+Generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,9 +23,11 @@
 		8440EAE92982B5A0001598C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8440EAEB2982B5A0001598C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8440EAEE2982B5A0001598C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8440EAF02982B5A2001598C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8440EAF02982B5A2001598C3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8440EAF32982B5A2001598C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8440EAF52982B5A2001598C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8440EAFD2982B92F001598C3 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		8440EB012982B9E5001598C3 /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,33 @@
 		8440EAE62982B5A0001598C3 /* YassirMoviesTask */ = {
 			isa = PBXGroup;
 			children = (
+				8440EAFC2982B911001598C3 /* Resources */,
 				8440EAE72982B5A0001598C3 /* AppDelegate.swift */,
 				8440EAE92982B5A0001598C3 /* SceneDelegate.swift */,
 				8440EAEB2982B5A0001598C3 /* ViewController.swift */,
 				8440EAED2982B5A0001598C3 /* Main.storyboard */,
-				8440EAF02982B5A2001598C3 /* Assets.xcassets */,
 				8440EAF22982B5A2001598C3 /* LaunchScreen.storyboard */,
 				8440EAF52982B5A2001598C3 /* Info.plist */,
 			);
 			path = YassirMoviesTask;
+			sourceTree = "<group>";
+		};
+		8440EAFC2982B911001598C3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8440EAFF2982B949001598C3 /* Assets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8440EAFF2982B949001598C3 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				8440EAF02982B5A2001598C3 /* Images.xcassets */,
+				8440EAFD2982B92F001598C3 /* Colors.xcassets */,
+				8440EB012982B9E5001598C3 /* XCAssets+Generated.swift */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,6 +100,7 @@
 				8440EAE12982B5A0001598C3 /* Frameworks */,
 				8440EAE22982B5A0001598C3 /* Resources */,
 				8440EAFB2982B829001598C3 /* SwiftLint */,
+				8440EB002982B99F001598C3 /* SwiftGen */,
 			);
 			buildRules = (
 			);
@@ -127,7 +150,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8440EAF42982B5A2001598C3 /* LaunchScreen.storyboard in Resources */,
-				8440EAF12982B5A2001598C3 /* Assets.xcassets in Resources */,
+				8440EAFE2982B92F001598C3 /* Colors.xcassets in Resources */,
+				8440EAF12982B5A2001598C3 /* Images.xcassets in Resources */,
 				8440EAEF2982B5A0001598C3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -154,6 +178,25 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n\n";
 		};
+		8440EB002982B99F001598C3 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "swiftgen\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -164,6 +207,7 @@
 				8440EAEC2982B5A0001598C3 /* ViewController.swift in Sources */,
 				8440EAE82982B5A0001598C3 /* AppDelegate.swift in Sources */,
 				8440EAEA2982B5A0001598C3 /* SceneDelegate.swift in Sources */,
+				8440EB022982B9E5001598C3 /* XCAssets+Generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
