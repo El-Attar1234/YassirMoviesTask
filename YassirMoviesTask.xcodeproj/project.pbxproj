@@ -40,6 +40,9 @@
 		8440EB6A2982F8AF001598C3 /* BasePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440EB692982F8AF001598C3 /* BasePresenterProtocol.swift */; };
 		8440EB6C2982FE91001598C3 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440EB6B2982FE91001598C3 /* HomeInteractor.swift */; };
 		8440EB6E29830589001598C3 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440EB6D29830589001598C3 /* HomeRouter.swift */; };
+		8440EB742983080D001598C3 /* UITableView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440EB732983080D001598C3 /* UITableView+Ext.swift */; };
+		8440EB7729830836001598C3 /* NSObject+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440EB7629830836001598C3 /* NSObject+Ext.swift */; };
+		8440EB7A298308A4001598C3 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440EB79298308A4001598C3 /* View+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +75,9 @@
 		8440EB692982F8AF001598C3 /* BasePresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenterProtocol.swift; sourceTree = "<group>"; };
 		8440EB6B2982FE91001598C3 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		8440EB6D29830589001598C3 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		8440EB732983080D001598C3 /* UITableView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Ext.swift"; sourceTree = "<group>"; };
+		8440EB7629830836001598C3 /* NSObject+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Ext.swift"; sourceTree = "<group>"; };
+		8440EB79298308A4001598C3 /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +123,7 @@
 				8440EB592982F28F001598C3 /* Base */,
 				8440EB092982BAB9001598C3 /* Features */,
 				8440EB3E2982C72D001598C3 /* Data */,
+				8440EB6F298307BD001598C3 /* Utils */,
 			);
 			path = YassirMoviesTask;
 			sourceTree = "<group>";
@@ -350,6 +357,48 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		8440EB6F298307BD001598C3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8440EB71298307D4001598C3 /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		8440EB71298307D4001598C3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8440EB7829830895001598C3 /* View */,
+				8440EB7529830825001598C3 /* NSObject */,
+				8440EB72298307DB001598C3 /* UITableView */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8440EB72298307DB001598C3 /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				8440EB732983080D001598C3 /* UITableView+Ext.swift */,
+			);
+			path = UITableView;
+			sourceTree = "<group>";
+		};
+		8440EB7529830825001598C3 /* NSObject */ = {
+			isa = PBXGroup;
+			children = (
+				8440EB7629830836001598C3 /* NSObject+Ext.swift */,
+			);
+			path = NSObject;
+			sourceTree = "<group>";
+		};
+		8440EB7829830895001598C3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8440EB79298308A4001598C3 /* View+Ext.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -494,6 +543,8 @@
 				8440EB6A2982F8AF001598C3 /* BasePresenterProtocol.swift in Sources */,
 				8440EB6E29830589001598C3 /* HomeRouter.swift in Sources */,
 				8440EB482982C801001598C3 /* MoviesEndPoint.swift in Sources */,
+				8440EB7729830836001598C3 /* NSObject+Ext.swift in Sources */,
+				8440EB7A298308A4001598C3 /* View+Ext.swift in Sources */,
 				8440EB082982BA71001598C3 /* SceneContainer.swift in Sources */,
 				8440EB232982BFA1001598C3 /* Environment.swift in Sources */,
 				8440EAE82982B5A0001598C3 /* AppDelegate.swift in Sources */,
@@ -501,6 +552,7 @@
 				8440EAEA2982B5A0001598C3 /* SceneDelegate.swift in Sources */,
 				8440EB642982F77D001598C3 /* HomeProtocols.swift in Sources */,
 				8440EB5B2982F2C1001598C3 /* BaseViewProtocol.swift in Sources */,
+				8440EB742983080D001598C3 /* UITableView+Ext.swift in Sources */,
 				8440EB4E2982CAFD001598C3 /* DataSource.swift in Sources */,
 				8440EB022982B9E5001598C3 /* XCAssets+Generated.swift in Sources */,
 			);
