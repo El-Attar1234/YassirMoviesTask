@@ -43,6 +43,8 @@
 		8440EB742983080D001598C3 /* UITableView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440EB732983080D001598C3 /* UITableView+Ext.swift */; };
 		8440EB7729830836001598C3 /* NSObject+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440EB7629830836001598C3 /* NSObject+Ext.swift */; };
 		8440EB7A298308A4001598C3 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440EB79298308A4001598C3 /* View+Ext.swift */; };
+		8440EB7E2983096D001598C3 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440EB7C2983096D001598C3 /* MovieCell.swift */; };
+		8440EB7F2983096D001598C3 /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8440EB7D2983096D001598C3 /* MovieCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +80,8 @@
 		8440EB732983080D001598C3 /* UITableView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Ext.swift"; sourceTree = "<group>"; };
 		8440EB7629830836001598C3 /* NSObject+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Ext.swift"; sourceTree = "<group>"; };
 		8440EB79298308A4001598C3 /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
+		8440EB7C2983096D001598C3 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		8440EB7D2983096D001598C3 /* MovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +192,7 @@
 		8440EB0B2982BAF4001598C3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8440EB7B29830948001598C3 /* Cell */,
 				8440EB0C2982BAFA001598C3 /* VC */,
 			);
 			path = View;
@@ -399,6 +404,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		8440EB7B29830948001598C3 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8440EB7C2983096D001598C3 /* MovieCell.swift */,
+				8440EB7D2983096D001598C3 /* MovieCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -480,6 +494,7 @@
 				8440EB1F2982BDD1001598C3 /* Stage.xcconfig in Resources */,
 				8440EB102982BB0C001598C3 /* HomeVC.xib in Resources */,
 				8440EB212982BDE1001598C3 /* Live.xcconfig in Resources */,
+				8440EB7F2983096D001598C3 /* MovieCell.xib in Resources */,
 				8440EAF12982B5A2001598C3 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -534,6 +549,7 @@
 			files = (
 				8440EB0F2982BB0C001598C3 /* HomeVC.swift in Sources */,
 				8440EB6C2982FE91001598C3 /* HomeInteractor.swift in Sources */,
+				8440EB7E2983096D001598C3 /* MovieCell.swift in Sources */,
 				8440EB452982C783001598C3 /* NetworkError.swift in Sources */,
 				8440EB522982CBF0001598C3 /* Movie.swift in Sources */,
 				8440EB552982CC22001598C3 /* ServerResponse.swift in Sources */,

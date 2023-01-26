@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeVC" customModule="YassirMoviesTask" customModuleProvider="target">
             <connections>
+                <outlet property="moviesTableView" destination="8yN-ia-J8b" id="lFI-Vo-ncV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,8 +18,20 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8yN-ia-J8b">
+                    <rect key="frame" x="0.0" y="47" width="390" height="763"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="8yN-ia-J8b" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="5ec-jh-S2L"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="8yN-ia-J8b" secondAttribute="bottom" id="ArQ-h7-3la"/>
+                <constraint firstItem="8yN-ia-J8b" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="K9i-ay-JXU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8yN-ia-J8b" secondAttribute="trailing" id="Nay-BT-eYH"/>
+            </constraints>
             <point key="canvasLocation" x="66" y="21"/>
         </view>
     </objects>

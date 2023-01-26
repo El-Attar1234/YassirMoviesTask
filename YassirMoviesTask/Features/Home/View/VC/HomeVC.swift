@@ -6,10 +6,17 @@
 //
 
 import UIKit
-import RxSwift
-import RxCocoa
+
 
 class HomeVC: BaseViewController {
+    @IBOutlet weak var moviesTableView: UITableView!{
+        didSet {
+            moviesTableView.dataSource = self
+            moviesTableView.delegate   = self
+            moviesTableView.register(cellType: MovieCell.self)
+        }
+    }
+    
     
     private var presenter: HomePresenterProtocol?
 
@@ -29,6 +36,23 @@ class HomeVC: BaseViewController {
 
 extension HomeVC: HomeViewProtocol {
     func reloadData() {
-        print(presenter?.getMoviesCount())
+        moviesTableView.reloadData()
+    }
+}
+
+extension HomeVC: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        presenter?.getMoviesCount() ?? 0
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(with: MovieCell.self, for: indexPath)
+        return cell
+    }
+}
+
+extension HomeVC: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(presenter?.getMovie(item: indexPath.item))
     }
 }
