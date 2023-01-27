@@ -10,6 +10,8 @@ import Foundation
 // MARK: - ViewController -> Presenter
 protocol HomePresenterProtocol: BasePresenterProtocol {
     func getMovies()
+    func refresh()
+    func loadMore()
     func getMoviesCount() -> Int
     func getMovie(item: Int) -> Movie
     func didSelect(item: Int)

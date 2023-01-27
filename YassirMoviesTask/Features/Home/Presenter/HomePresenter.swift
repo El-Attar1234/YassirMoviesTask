@@ -28,26 +28,42 @@ class HomePresenter {
 }
 
 extension HomePresenter: HomePresenterProtocol {
-    func didSelect(item: Int) {
-        let movieId = movise[item].id ?? 0
-        router?.navigateToMovieDetails(id: movieId)
-    }
-    
+   
     func viewWillAppear() {
         view?.showLoadingIndicator?()
         currentPage = 1
+        totalResultsCount = 0
         movise = []
         interactor?.getMovies(page: currentPage)
     }
     func getMovies() {
         interactor?.getMovies(page: currentPage)
     }
+    func refresh() {
+        viewWillAppear()
+    }
+    
+    func loadMore() {
+        if movise.count < totalResultsCount {
+            currentPage += 1
+            interactor?.getMovies(page: currentPage)
+            
+        }
+    }
+    
+   
+    
     
     func getMoviesCount() -> Int {
         movise.count
     }
     func getMovie(item: Int) -> Movie {
         movise[item]
+    }
+    
+    func didSelect(item: Int) {
+        let movieId = movise[item].id ?? 0
+        router?.navigateToMovieDetails(id: movieId)
     }
 }
 

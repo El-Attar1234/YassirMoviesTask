@@ -52,7 +52,14 @@ extension HomeVC: UITableViewDataSource {
 }
 
 extension HomeVC: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         presenter?.didSelect(item: indexPath.item)
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.item ==  (presenter?.getMoviesCount() ?? 0) - 2 {
+            presenter?.loadMore()
+        }
     }
 }
