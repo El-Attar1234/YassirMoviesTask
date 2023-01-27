@@ -11,6 +11,13 @@
    outputs:
      - templateName: swift5
        output: Assets/XCAssets+Generated.swift
+# Localization
+ strings:
+   inputs:
+     - Base.lproj
+   outputs:
+     - templateName: structured-swift5
+       output: Localization/Strings.swift
 
 # Fonts
  fonts:

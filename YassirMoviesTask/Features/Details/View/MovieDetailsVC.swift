@@ -36,10 +36,9 @@ class MovieDetailsVC: BaseViewController {
 extension MovieDetailsVC: MovieDetailsViewProtocol {
     func fetchedData(movie: MovieDetails?) {
         movieTitleLabel.text = movie?.title
-        voteLabel.text = "Total Votes : " + "\(movie?.voteCount ?? 0)" + "  |  " +
-        (movie?.voteAverage?.description ?? "0")
-        popularityLabel.text = "Popularity : " + "\(movie?.popularity ?? 0)"
-        releaseDateLabel.text = "Release Date : " + "\(movie?.releaseDate ?? "-")"
+        voteLabel.text = L10n.Movie.totalVotes(movie?.voteCount ?? 0, movie?.voteAverage?.description ?? "0")
+        popularityLabel.text = L10n.Movie.popularity(movie?.popularity ?? 0)
+        releaseDateLabel.text = L10n.Movie.releaseDate(movie?.releaseDate ?? "-")
         overviewLabel.text = movie?.overview
         movieImage.loadImageFromUrl(urlString: movie?.posterFullPath ?? "",
                                     placeHolderImage: Asset.Images.icNoData.image)
