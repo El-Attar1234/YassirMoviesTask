@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Hero
 
 class HomeVC: BaseViewController {
     @IBOutlet private weak var moviesTableView: UITableView! {
@@ -53,8 +54,7 @@ extension HomeVC: HomeViewProtocol {
 extension HomeVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("TTTTTT \( presenter?.getMoviesCount() ?? 0)")
-       return presenter?.getMoviesCount() ?? 0
+           presenter?.getMoviesCount() ?? 0
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(with: MovieCell.self, for: indexPath)
@@ -66,6 +66,7 @@ extension HomeVC: UITableViewDataSource {
 extension HomeVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("HEEEEro \(presenter?.getMovie(item: indexPath.item).id)")
         presenter?.didSelect(item: indexPath.item)
     }
     

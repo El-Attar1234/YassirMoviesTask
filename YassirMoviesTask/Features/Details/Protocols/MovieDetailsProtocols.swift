@@ -10,6 +10,7 @@ import Foundation
 // MARK: - ViewController -> Presenter
 protocol MovieDetailsPresenterProtocol: BasePresenterProtocol {
     func getMovieDetails()
+    func getMovieID() -> Int
 }
 
 // MARK: - Presenter -> ViewController

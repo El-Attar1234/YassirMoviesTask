@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Hero
 
 class MovieDetailsVC: BaseViewController {
     @IBOutlet private weak var movieImage: UIImageView!
@@ -19,6 +20,10 @@ class MovieDetailsVC: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.hero.isEnabled = true
+        movieImage.hero.id = "\(presenter?.getMovieID() ?? 0)"
+//        movieImage.hero.id = "\(presenter?.getMovieID() ?? 0)"
+       print("HEEEEro Second \(presenter?.getMovieID() ?? 0)")
         presenter?.getMovieDetails()
     }
     

@@ -27,6 +27,10 @@ class MovieDetailsPresenter {
 }
 
 extension MovieDetailsPresenter: MovieDetailsPresenterProtocol {
+    func getMovieID() -> Int {
+        id
+    }
+    
     func getMovieDetails() {
         view?.showLoadingIndicator?()
         interactor?.getMovieDetails(id: id)
