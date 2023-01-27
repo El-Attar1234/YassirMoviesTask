@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Hero
 
 class HomeVC: BaseViewController {
     @IBOutlet private weak var moviesTableView: UITableView! {
@@ -27,12 +26,18 @@ class HomeVC: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         moviesTableView.refreshControl = refreshControl
+       
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        setupNavBar()
         presenter?.viewWillAppear?()
     }
     
+    private func setupNavBar() {
+        title = L10n.movies
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+    }
     // MARK: - Custom Setter
     public func setPresenter (presenter: HomePresenterProtocol) {
         self.presenter = presenter
@@ -42,6 +47,7 @@ class HomeVC: BaseViewController {
     private func refreshWeatherData(_ sender: Any) {
         presenter?.refresh()
     }
+    
 }
 
 extension HomeVC: HomeViewProtocol {
@@ -66,12 +72,12 @@ extension HomeVC: UITableViewDataSource {
 extension HomeVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("HEEEEro \(presenter?.getMovie(item: indexPath.item).id)")
         presenter?.didSelect(item: indexPath.item)
+        tableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if indexPath.item ==  (presenter?.getMoviesCount() ?? 0) - 2 {
+        if indexPath.item ==  (presenter?.getMoviesCount() ?? 0) - 2 { // pagination
             presenter?.loadMore()
         }
     }

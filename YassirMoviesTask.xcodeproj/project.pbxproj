@@ -56,7 +56,6 @@
 		84DB23592983C56100ABBC91 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84DB23572983C56100ABBC91 /* Localizable.strings */; };
 		84DB235B2983C5EC00ABBC91 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DB235A2983C5EC00ABBC91 /* Strings.swift */; };
 		84DB235E2983C8DD00ABBC91 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 84DB235D2983C8DD00ABBC91 /* Moya */; };
-		84DB23612983D04100ABBC91 /* Hero in Frameworks */ = {isa = PBXBuildFile; productRef = 84DB23602983D04100ABBC91 /* Hero */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -117,7 +116,6 @@
 				8440EB3D2982C358001598C3 /* Kingfisher in Frameworks */,
 				8440EB3A2982C32E001598C3 /* MBProgressHUD in Frameworks */,
 				84DB235E2983C8DD00ABBC91 /* Moya in Frameworks */,
-				84DB23612983D04100ABBC91 /* Hero in Frameworks */,
 				8440EB372982C307001598C3 /* SwiftMessages in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -553,7 +551,6 @@
 				8440EB392982C32E001598C3 /* MBProgressHUD */,
 				8440EB3C2982C358001598C3 /* Kingfisher */,
 				84DB235D2983C8DD00ABBC91 /* Moya */,
-				84DB23602983D04100ABBC91 /* Hero */,
 			);
 			productName = YassirMoviesTask;
 			productReference = 8440EAE42982B5A0001598C3 /* YassirMoviesTask.app */;
@@ -588,7 +585,6 @@
 				8440EB382982C32E001598C3 /* XCRemoteSwiftPackageReference "MBProgressHUD" */,
 				8440EB3B2982C358001598C3 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				84DB235C2983C8DD00ABBC91 /* XCRemoteSwiftPackageReference "Moya" */,
-				84DB235F2983D04100ABBC91 /* XCRemoteSwiftPackageReference "Hero" */,
 			);
 			productRefGroup = 8440EAE52982B5A0001598C3 /* Products */;
 			projectDirPath = "";
@@ -1299,14 +1295,6 @@
 				minimumVersion = 15.0.0;
 			};
 		};
-		84DB235F2983D04100ABBC91 /* XCRemoteSwiftPackageReference "Hero" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/HeroTransitions/Hero";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1329,11 +1317,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 84DB235C2983C8DD00ABBC91 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = Moya;
-		};
-		84DB23602983D04100ABBC91 /* Hero */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 84DB235F2983D04100ABBC91 /* XCRemoteSwiftPackageReference "Hero" */;
-			productName = Hero;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

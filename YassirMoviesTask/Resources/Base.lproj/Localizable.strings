@@ -5,7 +5,9 @@
   Created by Ibtikar on 27/01/2023.
   
 */
-"movie.totalVotes" = "Total Votes : %@  |  %@";
+"movie.totalVotes" = "Total Votes : %@ ";
+"movie.rating" = "Rating : %@ ";
 "movie.releaseDate" = "Release Date : %@ ";
 "movie.popularity" = "Popularity : %@";
+"movies" = "Movies";
 

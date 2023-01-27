@@ -51,9 +51,6 @@ extension HomePresenter: HomePresenterProtocol {
         }
     }
     
-   
-    
-    
     func getMoviesCount() -> Int {
         movise.count
     }

@@ -10,10 +10,16 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
+  /// Movies
+  internal static let movies = L10n.tr("Localizable", "movies", fallback: "Movies")
   internal enum Movie {
     /// Popularity : %@
     internal static func popularity(_ p1: Any) -> String {
       return L10n.tr("Localizable", "movie.popularity", String(describing: p1), fallback: "Popularity : %@")
+    }
+    /// Rating : %@ 
+    internal static func rating(_ p1: Any) -> String {
+      return L10n.tr("Localizable", "movie.rating", String(describing: p1), fallback: "Rating : %@ ")
     }
     /// Release Date : %@ 
     internal static func releaseDate(_ p1: Any) -> String {
@@ -23,8 +29,8 @@ internal enum L10n {
     ///   YassirMoviesTask
     /// 
     ///   Created by Ibtikar on 27/01/2023.
-    internal static func totalVotes(_ p1: Any, _ p2: Any) -> String {
-      return L10n.tr("Localizable", "movie.totalVotes", String(describing: p1), String(describing: p2), fallback: "Total Votes : %@  |  %@")
+    internal static func totalVotes(_ p1: Any) -> String {
+      return L10n.tr("Localizable", "movie.totalVotes", String(describing: p1), fallback: "Total Votes : %@ ")
     }
   }
 }

@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Hero
 
 class MovieDetailsVC: BaseViewController {
     @IBOutlet private weak var movieImage: UIImageView!
@@ -15,22 +14,18 @@ class MovieDetailsVC: BaseViewController {
     @IBOutlet private weak var overviewLabel: UILabel!
     @IBOutlet private weak var popularityLabel: UILabel!
     @IBOutlet private weak var releaseDateLabel: UILabel!
-    
+    @IBOutlet private weak var ratingLabel: UILabel!
     private var presenter: MovieDetailsPresenterProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.hero.isEnabled = true
-        movieImage.hero.id = "\(presenter?.getMovieID() ?? 0)"
-//        movieImage.hero.id = "\(presenter?.getMovieID() ?? 0)"
-       print("HEEEEro Second \(presenter?.getMovieID() ?? 0)")
         presenter?.getMovieDetails()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.topItem?.title = ""
     }
+    
     // MARK: - Custom Setter
     public func setPresenter (presenter: MovieDetailsPresenterProtocol) {
         self.presenter = presenter
@@ -41,7 +36,8 @@ class MovieDetailsVC: BaseViewController {
 extension MovieDetailsVC: MovieDetailsViewProtocol {
     func fetchedData(movie: MovieDetails?) {
         movieTitleLabel.text = movie?.title
-        voteLabel.text = L10n.Movie.totalVotes(movie?.voteCount ?? 0, movie?.voteAverage?.description ?? "0")
+        voteLabel.text = L10n.Movie.totalVotes(movie?.voteCount ?? 0)
+        ratingLabel.text = L10n.Movie.rating(movie?.voteAverage ?? 0.0)
         popularityLabel.text = L10n.Movie.popularity(movie?.popularity ?? 0)
         releaseDateLabel.text = L10n.Movie.releaseDate(movie?.releaseDate ?? "-")
         overviewLabel.text = movie?.overview
