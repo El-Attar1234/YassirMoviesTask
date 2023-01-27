@@ -29,18 +29,19 @@ class HomePresenter {
 
 extension HomePresenter: HomePresenterProtocol {
    
-    func viewWillAppear() {
+    func viewDidLoad() {
         view?.showLoadingIndicator?()
-        currentPage = 1
-        totalResultsCount = 0
-        movise = []
-        interactor?.getMovies(page: currentPage)
+        refresh()
+      
     }
     func getMovies() {
         interactor?.getMovies(page: currentPage)
     }
     func refresh() {
-        viewWillAppear()
+        currentPage = 1
+        totalResultsCount = 0
+        movise = []
+        interactor?.getMovies(page: currentPage)
     }
     
     func loadMore() {

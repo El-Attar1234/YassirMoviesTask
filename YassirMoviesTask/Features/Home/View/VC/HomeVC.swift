@@ -26,12 +26,13 @@ class HomeVC: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         moviesTableView.refreshControl = refreshControl
+        presenter?.viewDidLoad?()
        
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setupNavBar()
-        presenter?.viewWillAppear?()
+        
     }
     
     private func setupNavBar() {
