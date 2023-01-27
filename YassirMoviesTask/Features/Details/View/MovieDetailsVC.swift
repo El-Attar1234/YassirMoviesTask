@@ -13,6 +13,7 @@ class MovieDetailsVC: BaseViewController {
     
     @IBOutlet weak var voteLabel: UILabel!
     private var presenter: MovieDetailsPresenterProtocol?
+    @IBOutlet weak var overviewLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,7 @@ extension MovieDetailsVC: MovieDetailsViewProtocol {
         movieTitleLabel.text = movie?.title
         voteLabel.text = "Total Votes : " + "\(movie?.voteCount ?? 0)" + "  |  " +
         (movie?.voteAverage?.description ?? "0")
+        overviewLabel.text = movie?.overview
         movieImage.loadImageFromUrl(urlString: movie?.posterFullPath ?? "",
                                     placeHolderImage: Asset.Images.icNoData.image)
         
