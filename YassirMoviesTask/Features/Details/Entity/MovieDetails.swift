@@ -21,7 +21,7 @@ struct MovieDetails: Codable {
     let popularity: Double?
     let posterPath: String?
     var posterFullPath: String? {
-        guard let posterPath = posterPath else { return nil }
+        guard let posterPath = backdropPath else { return nil }
         return Environment.posterbaseURL + posterPath
     }
     let productionCompanies: [ProductionCompany?]

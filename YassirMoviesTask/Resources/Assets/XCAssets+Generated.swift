@@ -33,6 +33,8 @@ internal enum Asset {
   internal enum Images {
     internal static let accentColor = ColorAsset(name: "AccentColor")
     internal static let icNoData = ImageAsset(name: "ic_no_data")
+    internal static let play = ImageAsset(name: "play")
+    internal static let star = ImageAsset(name: "star")
   }
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name

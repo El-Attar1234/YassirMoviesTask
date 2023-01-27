@@ -9,7 +9,9 @@ import UIKit
 
 class MovieDetailsVC: BaseViewController {
     @IBOutlet private weak var movieImage: UIImageView!
+    @IBOutlet weak var movieTitleLabel: UILabel!
     
+    @IBOutlet weak var voteLabel: UILabel!
     private var presenter: MovieDetailsPresenterProtocol?
     
     override func viewDidLoad() {
@@ -26,8 +28,12 @@ class MovieDetailsVC: BaseViewController {
 
 extension MovieDetailsVC: MovieDetailsViewProtocol {
     func fetchedData(movie: MovieDetails?) {
+        movieTitleLabel.text = movie?.title
+        voteLabel.text = "Total Votes : " + "\(movie?.voteCount ?? 0)" + "  |  " +
+        (movie?.voteAverage?.description ?? "0")
         movieImage.loadImageFromUrl(urlString: movie?.posterFullPath ?? "",
                                     placeHolderImage: Asset.Images.icNoData.image)
+        
     }
     
 }
