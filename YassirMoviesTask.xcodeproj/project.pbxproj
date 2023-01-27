@@ -21,7 +21,6 @@
 		8440EB1F2982BDD1001598C3 /* Stage.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 8440EB1E2982BDD1001598C3 /* Stage.xcconfig */; };
 		8440EB212982BDE1001598C3 /* Live.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 8440EB202982BDDF001598C3 /* Live.xcconfig */; };
 		8440EB232982BFA1001598C3 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440EB222982BFA1001598C3 /* Environment.swift */; };
-		8440EB2F2982C1E2001598C3 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 8440EB2E2982C1E2001598C3 /* Moya */; };
 		8440EB372982C307001598C3 /* SwiftMessages in Frameworks */ = {isa = PBXBuildFile; productRef = 8440EB362982C307001598C3 /* SwiftMessages */; };
 		8440EB3A2982C32E001598C3 /* MBProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 8440EB392982C32E001598C3 /* MBProgressHUD */; };
 		8440EB3D2982C358001598C3 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8440EB3C2982C358001598C3 /* Kingfisher */; };
@@ -56,6 +55,7 @@
 		84DB23552983409D00ABBC91 /* MovieDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DB23542983409D00ABBC91 /* MovieDetailsRouter.swift */; };
 		84DB23592983C56100ABBC91 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84DB23572983C56100ABBC91 /* Localizable.strings */; };
 		84DB235B2983C5EC00ABBC91 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DB235A2983C5EC00ABBC91 /* Strings.swift */; };
+		84DB235E2983C8DD00ABBC91 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 84DB235D2983C8DD00ABBC91 /* Moya */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,8 +115,8 @@
 			files = (
 				8440EB3D2982C358001598C3 /* Kingfisher in Frameworks */,
 				8440EB3A2982C32E001598C3 /* MBProgressHUD in Frameworks */,
+				84DB235E2983C8DD00ABBC91 /* Moya in Frameworks */,
 				8440EB372982C307001598C3 /* SwiftMessages in Frameworks */,
-				8440EB2F2982C1E2001598C3 /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,10 +547,10 @@
 			);
 			name = YassirMoviesTask;
 			packageProductDependencies = (
-				8440EB2E2982C1E2001598C3 /* Moya */,
 				8440EB362982C307001598C3 /* SwiftMessages */,
 				8440EB392982C32E001598C3 /* MBProgressHUD */,
 				8440EB3C2982C358001598C3 /* Kingfisher */,
+				84DB235D2983C8DD00ABBC91 /* Moya */,
 			);
 			productName = YassirMoviesTask;
 			productReference = 8440EAE42982B5A0001598C3 /* YassirMoviesTask.app */;
@@ -581,10 +581,10 @@
 			);
 			mainGroup = 8440EADB2982B5A0001598C3;
 			packageReferences = (
-				8440EB2D2982C1E2001598C3 /* XCRemoteSwiftPackageReference "Moya" */,
 				8440EB352982C307001598C3 /* XCRemoteSwiftPackageReference "SwiftMessages" */,
 				8440EB382982C32E001598C3 /* XCRemoteSwiftPackageReference "MBProgressHUD" */,
 				8440EB3B2982C358001598C3 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				84DB235C2983C8DD00ABBC91 /* XCRemoteSwiftPackageReference "Moya" */,
 			);
 			productRefGroup = 8440EAE52982B5A0001598C3 /* Products */;
 			projectDirPath = "";
@@ -1263,14 +1263,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		8440EB2D2982C1E2001598C3 /* XCRemoteSwiftPackageReference "Moya" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Moya/Moya";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 15.0.0;
-			};
-		};
 		8440EB352982C307001598C3 /* XCRemoteSwiftPackageReference "SwiftMessages" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftKickMobile/SwiftMessages";
@@ -1295,14 +1287,17 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		84DB235C2983C8DD00ABBC91 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8440EB2E2982C1E2001598C3 /* Moya */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8440EB2D2982C1E2001598C3 /* XCRemoteSwiftPackageReference "Moya" */;
-			productName = Moya;
-		};
 		8440EB362982C307001598C3 /* SwiftMessages */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8440EB352982C307001598C3 /* XCRemoteSwiftPackageReference "SwiftMessages" */;
@@ -1317,6 +1312,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8440EB3B2982C358001598C3 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		84DB235D2983C8DD00ABBC91 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84DB235C2983C8DD00ABBC91 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
