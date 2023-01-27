@@ -9,16 +9,22 @@ import UIKit
 
 class MovieDetailsVC: BaseViewController {
     @IBOutlet private weak var movieImage: UIImageView!
-    @IBOutlet weak var movieTitleLabel: UILabel!
+    @IBOutlet private weak var movieTitleLabel: UILabel!
+    @IBOutlet private weak var voteLabel: UILabel!
+    @IBOutlet private weak var overviewLabel: UILabel!
+    @IBOutlet private weak var popularityLabel: UILabel!
+    @IBOutlet private weak var releaseDateLabel: UILabel!
     
-    @IBOutlet weak var voteLabel: UILabel!
     private var presenter: MovieDetailsPresenterProtocol?
-    @IBOutlet weak var overviewLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.getMovieDetails()
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.topItem?.title = ""
     }
     // MARK: - Custom Setter
     public func setPresenter (presenter: MovieDetailsPresenterProtocol) {
@@ -32,6 +38,8 @@ extension MovieDetailsVC: MovieDetailsViewProtocol {
         movieTitleLabel.text = movie?.title
         voteLabel.text = "Total Votes : " + "\(movie?.voteCount ?? 0)" + "  |  " +
         (movie?.voteAverage?.description ?? "0")
+        popularityLabel.text = "Popularity : " + "\(movie?.popularity ?? 0)"
+        releaseDateLabel.text = "Release Date : " + "\(movie?.releaseDate ?? "-")"
         overviewLabel.text = movie?.overview
         movieImage.loadImageFromUrl(urlString: movie?.posterFullPath ?? "",
                                     placeHolderImage: Asset.Images.icNoData.image)
