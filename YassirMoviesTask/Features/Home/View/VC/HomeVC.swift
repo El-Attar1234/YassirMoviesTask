@@ -7,9 +7,8 @@
 
 import UIKit
 
-
 class HomeVC: BaseViewController {
-    @IBOutlet private weak var moviesTableView: UITableView!{
+    @IBOutlet private weak var moviesTableView: UITableView! {
         didSet {
             moviesTableView.dataSource = self
             moviesTableView.delegate   = self
@@ -18,9 +17,15 @@ class HomeVC: BaseViewController {
     }
     
     private var presenter: HomePresenterProtocol?
-
+    private lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refreshWeatherData(_:)), for: .valueChanged)
+        return refreshControl
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        moviesTableView.refreshControl = refreshControl
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -31,10 +36,16 @@ class HomeVC: BaseViewController {
     public func setPresenter (presenter: HomePresenterProtocol) {
         self.presenter = presenter
     }
+    
+    @objc
+    private func refreshWeatherData(_ sender: Any) {
+        presenter?.refresh()
+    }
 }
 
 extension HomeVC: HomeViewProtocol {
     func reloadData() {
+        refreshControl.endRefreshing()
         moviesTableView.reloadData()
     }
 }
@@ -42,7 +53,8 @@ extension HomeVC: HomeViewProtocol {
 extension HomeVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        presenter?.getMoviesCount() ?? 0
+        print("TTTTTT \( presenter?.getMoviesCount() ?? 0)")
+       return presenter?.getMoviesCount() ?? 0
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(with: MovieCell.self, for: indexPath)
